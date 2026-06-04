@@ -1,105 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Teléfono 2000's</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retro Phone Pro</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="phone">
-            <!-- Antena -->
-            <div class="antenna"></div>
-            
-            <!-- Pantalla -->
-            <div class="screen">
-                <div class="lcd-display">
-                    <div class="status-bar">
-                        <span class="signal">📶</span>
-                        <span class="battery">🔋</span>
-                    </div>
-                    <div class="display-content">
-                        <div id="mainDisplay" class="main-display">
-                            <div class="time-display" id="timeDisplay">12:34</div>
-                            <div class="operator-display" id="operatorDisplay">MOVISTAR</div>
-                        </div>
-                    </div>
-                    <div class="soft-keys">
-                        <span id="softKey1" class="soft-key">MENU</span>
-                        <span id="softKey2" class="soft-key">SALIR</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Área de controles -->
-            <div class="controls-area">
-                <!-- Teclado numérico -->
-                <div class="keypad">
-                    <button class="key" data-value="1">1<br><span class="key-text"></span></button>
-                    <button class="key" data-value="2">2<br><span class="key-text">ABC</span></button>
-                    <button class="key" data-value="3">3<br><span class="key-text">DEF</span></button>
-                    
-                    <button class="key" data-value="4">4<br><span class="key-text">GHI</span></button>
-                    <button class="key" data-value="5">5<br><span class="key-text">JKL</span></button>
-                    <button class="key" data-value="6">6<br><span class="key-text">MNO</span></button>
-                    
-                    <button class="key" data-value="7">7<br><span class="key-text">PQRS</span></button>
-                    <button class="key" data-value="8">8<br><span class="key-text">TUV</span></button>
-                    <button class="key" data-value="9">9<br><span class="key-text">WXYZ</span></button>
-                    
-                    <button class="key" data-value="*">*<br><span class="key-text"></span></button>
-                    <button class="key" data-value="0">0<br><span class="key-text">+</span></button>
-                    <button class="key" data-value="#">#<br><span class="key-text"></span></button>
-                </div>
-
-                <!-- Botones de función -->
-                <div class="function-buttons">
-                    <button id="clearBtn" class="function-btn clear-btn">BORRAR</button>
-                    <button id="callBtn" class="function-btn call-btn">LLAMAR</button>
-                    <button id="endBtn" class="function-btn end-btn">COLGAR</button>
-                </div>
-            </div>
-
-            <!-- Altavoz -->
-            <div class="speaker"></div>
-
-            <!-- Micrófono -->
-            <div class="microphone"></div>
-        </div>
-    </div>
-
-    <!-- Modal para llamadas -->
-    <div id="callModal" class="modal hidden">
-        <div class="call-modal-content">
-            <div class="call-info">
-                <div id="callNumber" class="call-number">666 999 333</div>
-                <div id="callStatus" class="call-status">Marcando...</div>
-                <div id="callTimer" class="call-timer">00:00</div>
-            </div>
-            <button id="closeCallBtn" class="close-call-btn">COLGAR</button>
-        </div>
-    </div>
-
-    <!-- Modal para juegos -->
-    <div id="gameModal" class="modal hidden">
-        <div class="game-modal-content">
-            <div class="game-menu" id="gameMenu">
-                <h2>JUEGOS</h2>
-                <button id="snakeBtn" class="game-option">SNAKE</button>
-                <button id="backGameBtn" class="game-option">VOLVER</button>
-            </div>
-            <canvas id="snakeCanvas" class="snake-canvas hidden" width="200" height="200"></canvas>
-            <div id="snakeGameContainer" class="snake-game-container hidden">
-                <div id="snakeScore" class="snake-score">Score: 0</div>
-                <div id="snakeInstructions" class="snake-instructions">
-                    Use flechas o WASD para controlar
-                </div>
-                <button id="snakeBackBtn" class="game-option">VOLVER</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+<div class="phone">
+<div class="status"><span>RETRO OS</span><span id="clock"></span></div>
+<div class="screen" id="screen">
+<h2>📱 Retro Phone</h2>
+<div class="menu">
+<button onclick="openApp('sms')">SMS</button>
+<button onclick="openApp('calc')">Calc</button>
+<button onclick="openApp('snake')">Snake</button>
+</div>
+<div id="app"></div>
+</div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
